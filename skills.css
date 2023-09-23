@@ -52,10 +52,9 @@ section{
 }
 
 .logo{ 
-	font-size: 2.3rem;
-	font-family: 'Playfair';
+	font-size: 1.5rem;
 	color: #ffffff;
-	font-weight: 600;
+	font-weight: 500;
 }
 .navbar{
 	display: flex;
@@ -260,13 +259,13 @@ section{
 }
 /*percentage bar lang ni with color*/
 .skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {/*percentage bar HTML*/
-    width: 90%;
+    width: 93%;
 }
 .skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {/*percentage bar CSS*/
-    width: 95%;
+    width: 93%;
 }
 .skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {/*percentage bar Javascript*/
-    width: 93%;
+    width: 89%;
 }
 .skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {/*percentage bar PHP*/
     width: 85%;
@@ -277,7 +276,7 @@ section{
 
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {/*percentage bar web design*/
-    width: 92%;
+    width: 90%;
 }
 .skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {/*percentage bar dev*/
     width: 90%;
@@ -286,10 +285,10 @@ section{
     width: 95%;
 }
 .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {/*percentage bar appdev*/
-    width: 91%;
+    width: 85%;
 }
 .skills-column:nth-child(2) .skills-content .progress:nth-child(5) .bar span {/*percentage bar graphic des*/
-    width: 94%;
+    width: 88%;
 }
 
 
@@ -360,53 +359,6 @@ section{
 	color: #fff;
 }
 
-
-/*footer me portion*/
-.footer{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
-	padding: 1.6rem 9%;
-	background: var(--second-bg-color);
-}
-.footer-text p{ /*footer text portion */
-	font-size: 1.6rem;
-}
-.footer-iconTop a {
-	position: relative;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	padding: .8rem;
-	background: var(--bg-color);
-	border: .1rem solid var(--bg-color);
-	border-radius: .6rem;
-	z-index: 1;
-	overflow: hidden;
-}
-.footer-iconTop a::before{/*footer bg color sang up icon*/
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 0%;
-	height: 100%;
-	background: var(--third-color);
-	z-index: -1;
-	transition: .5s;
-}
-.footer-iconTop a:hover::before{
-	width: 100%;
-}
-.footer-iconTop a i{
-	font-size: 2.1rem;
-	color: white;
-	transition: .5s;
-}
-.footer-iconTop a:hover i{
-	color: var(--bg-color);
-}
 
 /*FLUID*/
 @media (max-width: 1200px){
