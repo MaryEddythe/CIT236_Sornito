@@ -29,7 +29,7 @@ html{
 }
 
 body{
-	background: url(images/bg.png) no-repeat;
+	background: #d4f8d4;
 	color: var(--text-bg-color);
 
 }
@@ -170,10 +170,127 @@ section{
 }
 
 
+/* SKILLS COLUMN */
+.skills{
+	min-height: auto;
+	padding-bottom: 7rem;
+	background: url(images/3.png) no-repeat;
+}
+.heading h1{
+	text-align: center;
+}
+.heading span{/*about span*/
+	text-align: center;
+	padding-top: 5%;
+	margin-bottom: 60px;
+	font-weight: 600;
+	position: relative;
+	color: var(--bg-color);
+}
+.heading span::after{
+	content: '';
+	background: #54A88C;
+	width: 58px;
+	height: 3px;
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.skills .skills-row{
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 5rem;
+}
+.skills-row .skills-column{
+	flex: 1 1 40rem;
+}
+.skills-column .title{
+	padding-top: 2%;
+	font-size: 2.5rem;
+	color: var(--bg-color);
+	margin: 0 0 1.5rem;
+}
+.skills-box .skills-content{
+	position: relative;
+	border: .2rem solid var(--second-bg-color);
+	border-radius: .6rem;
+	padding: .5rem 1.5rem;
+	z-index: 1;
+	overflow: hidden;
+}
+.skills-box .skills-content::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: #B7EBBD;
+	z-index: -1;
+	transition: 1.5s;
+}
+.skills-box .skills-content:hover::before{
+	width: 100%;
+}
+.skills-content .progress{
+	padding: 1rem 0;
+}
+.skills-content .progress h3{
+	font-size: 1.3rem;
+	display: flex;
+	color: var(--bg-color);
+	justify-content: space-between;
+}
+.skills-content .progress h3 span{ /*percentage ni */
+	color: var(--bg-color);
+}
+.skills-content .progress .bar{ /*percentage ni */
+	height: 2.5rem;
+	border-radius: .6rem;
+	border: .2rem solid #4A5E4C;
+	padding: .5rem;
+	margin: .5rem 0;
+}
+.skills-content .progress .bar span{/*percentage bar lang ni */
+	display: block;
+	height: 100%;
+	border-radius: .3rem;
+	background: #4A5E4C;
+}
+/*percentage bar lang ni with color*/
+.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {/*percentage bar HTML*/
+    width: 90%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {/*percentage bar CSS*/
+    width: 95%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {/*percentage bar Javascript*/
+    width: 93%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {/*percentage bar PHP*/
+    width: 85%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(5) .bar span {/*percentage bar Java*/
+    width: 88%;
+}
 
 
-
-
+.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {/*percentage bar web design*/
+    width: 92%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {/*percentage bar dev*/
+    width: 90%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {/*percentage bar ui/ux*/
+    width: 95%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {/*percentage bar appdev*/
+    width: 91%;
+}
+.skills-column:nth-child(2) .skills-content .progress:nth-child(5) .bar span {/*percentage bar graphic des*/
+    width: 94%;
+}
 
 
 /*facts about me section*/
@@ -181,7 +298,6 @@ section{
 	width: 100%;
 	height: 100vh;
 	padding: 0 8%;
-	background: white;
 }
 .container h1{
 	text-align: center;
@@ -318,10 +434,29 @@ section{
 }
 @media screen and (max-width: 600px){
 	.timeline{
-		margin: 50px auto;
+		margin: 50 auto;
 	}
 	.timeline::after{
 		left: 31px;
+	}
+	.container-educ{
+		width: 100%;
+		padding-left: 80px;
+		padding-right: 25px;
+	}
+	.text-box small{
+		margin-bottom: 10px;
+	}
+	.right-container{
+		left: 0;
+	}
+	.left-container img, .right-container img{
+		left: 10px;
+	}
+	.left-container-arrow, .right-container-arrow{
+		border-right: 15px solid #fff;
+		border-left: 0;
+		left: -15px;
 	}
 }
 /*@media (max-width: 768px){
@@ -368,7 +503,8 @@ section{
 		left: 0;
 		transition-delay: .25s;
 	}
-}*/
+}
+*/
 @media (max-width: 520px){
 	html{
 		font-size: 50%;

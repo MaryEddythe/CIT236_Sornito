@@ -29,7 +29,7 @@ html{
 }
 
 body{
-	background: url(images/bg.png) no-repeat;
+	background: #E8F8E6;
 	color: var(--text-bg-color);
 
 }
@@ -169,128 +169,144 @@ section{
   color:
 }
 
-
-
-
-
-
-
-
-/*facts about me section*/
+/* EDUCATION */
+/*more on bg purposes*/
 .container{
 	width: 100%;
 	height: 100vh;
 	padding: 0 8%;
-	background: white;
+	padding-bottom: 50px;
 }
 .container h1{
 	text-align: center;
-	padding-top: 5%;
-	margin-bottom: 60px;
+	padding-top: 10%;
+	margin-bottom: 50px;
 	font-weight: 700;
+	font-size: 30px;
 	position: relative;
-	color: black;
+	color: var(--bg-color);
 }
-.container h1::after{
-	content: '';
+.timeline{/* timeline */
+	position: relative;
+	max-width: 1200px
+	margin: 100px auto;
+}
+.container-educ{
+	padding: 3px 50px;
+	position: relative;
+	width: 50%;
+	animation: movedown 1s linear forwards;
+	opacity: 0;
+}
+@keyframes movedown{
+	0%{
+		opacity: 1;
+		transform: translateY(-30px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+.container-educ:nth-child(1){
+	animation-delay: 0s;
+}
+.container-educ:nth-child(2){
+	animation-delay: 1s;
+}
+.container-educ:nth-child(3){
+	animation-delay: 2s;
+}
+.container-educ:nth-child(4){
+	animation-delay: 3s;
+}
+
+
+
+.text-box{ /*textbox gd mismo sang education*/
+	padding: 20px 30px;
 	background: var(--bg-color);
-	width: 100px;
-	height: 5px;
-	position: absolute;
-	bottom: -5px;
-	left: 50%;
-	transform: translateX(-50%);
-}
-.row{/*para mag two columns ang facts*/
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	grid-gap: 30px;
-}
-.service{
-	text-align: center;
-	padding: 25px 10px;
-	border-radius: 5px;
-	font-size: 14px;
-	cursor: pointer;
-	background: transparent;
-	transition: transform 0.5s, background 0.5s;
-}
-.service i { /*para sa icons*/
-	font-size: 40px;
-	margin-bottom: 10px;
-	color: var(--bg-color);
-}
-.service h2{
-	font-weight: 600;
-	color: var(--bg-color);
-	margin-bottom: 8px;
+	position: relative;
+	border-radius: 6px;
 	font-size: 15px;
 }
-.service p{
-	color: var(--bg-color);
+.left-container{ /*left container ni ya*/
+	left: 0; 
 }
-.service:hover{
-	background: #008264;
-	color: #fff;
-	transform: scale(1.05);
+.right-container{ /*para mag right ang container*/
+	left: 50%;
 }
-.service:hover h2{
-	color: #fff;
+.container-educ img{ /*para ni ya sa logo schools*/
+	position: absolute;
+	width: 40px;
+	border-radius: 50%;
+	right: -20px;
+	top: 32px;
+	z-index: 10;
 }
-.service:hover i{
-	color: #fff;
+.right-container img{ /*para magkadto sa tunga ang logo*/
+	left: -20px;
 }
-.service:hover p{
-	color: #fff;
-}
-
-
-/*footer me portion*/
-.footer{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
-	padding: 1.6rem 9%;
-	background: var(--second-bg-color);
-}
-.footer-text p{ /*footer text portion */
-	font-size: 1.6rem;
-}
-.footer-iconTop a {
-	position: relative;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	padding: .8rem;
-	background: var(--bg-color);
-	border: .1rem solid var(--bg-color);
-	border-radius: .6rem;
-	z-index: 1;
-	overflow: hidden;
-}
-.footer-iconTop a::before{/*footer bg color sang up icon*/
+.timeline::after{
 	content: '';
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 0%;
+	width: 6px;
 	height: 100%;
-	background: var(--third-color);
+	background: var(--bg-color);
+	top: 0;
+	left: 50%;
+	margin-left: -3px;
 	z-index: -1;
-	transition: .5s;
+	animation: moveline  6s linear forwards;
 }
-.footer-iconTop a:hover::before{
-	width: 100%;
+@keyframes moveline{
+	0%{
+		height: 0;
+	}
+	100%{
+		height: 100%;
+	}
 }
-.footer-iconTop a i{
-	font-size: 2.1rem;
-	color: white;
-	transition: .5s;
+
+
+.text-box h4{ /*muni ya ang schools*/
+	font-weight: 600;
 }
-.footer-iconTop a:hover i{
-	color: var(--bg-color);
+.text-box small{ /*year sang education*/
+	display: inline-block;
+	margin-bottom: 15px;
+	font-size: 10px;
 }
+.text-box p{ /*year sang education*/
+	font-size: 12px;
+}
+.left-container-arrow{/*left arrow*/
+	height: 0;
+	width: 0;
+	position: absolute; 
+	top: 28px;
+	z-index: 1;
+	border-top: 15px solid transparent; 
+	border-bottom: 15px solid transparent; 
+	border-left: 15px solid var(--bg-color); 
+	right: -15px;
+}
+.right-container-arrow{/*right arrow*/
+	height: 0;
+	width: 0;
+	position: absolute; 
+	top: 28px;
+	z-index: 1;
+	border-top: 15px solid transparent; 
+	border-bottom: 15px solid transparent; 
+	border-right: 15px solid var(--bg-color); 
+	left: -15px;
+}
+/* EDUCATION */
+
+
+
+
 
 /*FLUID*/
 @media (max-width: 1200px){
@@ -318,16 +334,32 @@ section{
 }
 @media screen and (max-width: 600px){
 	.timeline{
-		margin: 50px auto;
+		margin: 50 auto;
 	}
 	.timeline::after{
 		left: 31px;
 	}
-}
-/*@media (max-width: 768px){
-	.header{
-		background: var(--bg-color);
+	.container-educ{
+		width: 100%;
+		padding-left: 80px;
+		padding-right: 25px;
 	}
+	.text-box small{
+		margin-bottom: 10px;
+	}
+	.right-container{
+		left: 0;
+	}
+	.left-container img, .right-container img{
+		left: 10px;
+	}
+	.left-container-arrow, .right-container-arrow{
+		border-right: 15px solid var(--bg-color);
+		border-left: 0;
+		left: -15px;
+	}
+}/*
+@media (max-width: 768px){
 	.navbar{
 		position: absolute;
 		top: 100%;
@@ -341,7 +373,6 @@ section{
 		z-index: 1;
 	}
 	.navbar a{
-		display: block;
 		font-size: 2rem;
 		margin: 3rem 0;
 		transform: translateX(-20rem);
@@ -358,7 +389,6 @@ section{
 		left: -100%;
 		width: 100%;
 		height: 100%;
-		background: black;
 		border-top: .1rem solid rgba(0, 0, 0, .2);
 		z-index: -1;
 		transition: .25s ease;
@@ -369,6 +399,7 @@ section{
 		transition-delay: .25s;
 	}
 }*/
+
 @media (max-width: 520px){
 	html{
 		font-size: 50%;
