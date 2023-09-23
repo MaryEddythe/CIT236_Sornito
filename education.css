@@ -358,6 +358,9 @@ section{
 		border-left: 0;
 		left: -15px;
 	}
+	.container{
+		padding-top: 5%;
+	}
 }/*
 @media (max-width: 768px){
 	.navbar{
@@ -415,10 +418,16 @@ section{
 		width: 38px;
 		height: 38px;
 	}
+	.container{
+		padding-top: 10%;
+	}
 }
 @media (max-width: 462px){
 	.home-content h1{
 		font-size: 5.2rem;
+	}
+	.content{
+		padding-top: 30%;
 	}
 	.footer{
 		flex-direction: column-reverse;
@@ -426,6 +435,9 @@ section{
 	.footer p{
 		margin-top: 2rem;
 		text-align: center;
+	}
+	.container{
+		padding-top: 40%;
 	}
 }
 @media (max-width: 371px){
@@ -440,5 +452,8 @@ section{
 	}
 	.home-content h1{
 		font-size: 5rem;
+	}
+	.container{
+		padding-top: 10%;
 	}
 }
